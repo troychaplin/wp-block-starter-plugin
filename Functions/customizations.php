@@ -1,6 +1,6 @@
 <?php
 
-namespace WPBS\Blocks;
+namespace Functions;
 
 if (! defined('ABSPATH')) {
   exit; // Exit if accessed directly.

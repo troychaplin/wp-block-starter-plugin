@@ -18,20 +18,14 @@ if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-// Include function files
-require_once plugin_dir_path(__FILE__) . 'Functions/allowed-blocks.php';
-require_once plugin_dir_path(__FILE__) . 'Functions/block-categories.php';
-require_once plugin_dir_path(__FILE__) . 'Functions/core-blocks.php';
-require_once plugin_dir_path(__FILE__) . 'Functions/customizations.php';
-require_once plugin_dir_path(__FILE__) . 'Functions/enqueue-scripts.php';
-require_once plugin_dir_path(__FILE__) . 'Functions/register-blocks.php';
-require_once plugin_dir_path(__FILE__) . 'Functions/remove-options.php';
+// Include Composer's autoload file
+require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
 
 // Instantiate the classes
-new WPBS\Blocks\AllowedBlocks();
-new WPBS\Blocks\BlockCategories();
-new WPBS\Blocks\CoreBlocks();
-new WPBS\Blocks\Customizations();
-new WPBS\Blocks\EnqueueScripts();
-new WPBS\Blocks\RegisterBlocks();
-new WPBS\Blocks\RemoveOptions();
+new Functions\AllowedBlocks();
+new Functions\BlockCategories();
+new Functions\CoreBlocks();
+new Functions\Customizations();
+new Functions\EnqueueScripts();
+new Functions\RegisterBlocks();
+new Functions\RemoveOptions();
